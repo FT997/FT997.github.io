@@ -138,9 +138,9 @@
       }
 
       .team-member {
-        width: calc(33.33% - 20px); /* 50% av bredden för två kolumner */
+        width: calc(33.33% - 120px); /* 50% av bredden för två kolumner */
         margin-bottom: 20px;
-        padding: 10px;
+        padding: 60px;
       }
 
       .team-member img {
@@ -160,10 +160,43 @@
         width: 100%; /* Bredden anpassas */
         text-align: left;
       }
+      /* Våra innehav */
+      #portfolio {
+        display: flex;
+        justify-content: flex-start; /* Placera längst upp till vänster */
+        align-items: flex-start; /* Placera längst upp till vänster */
+        flex-wrap: wrap; /* Låt elementen wrapa när de inte får plats bredvid varandra */
+      }
 
+      .portfolio-company {
+        width: calc(50% - 20px); /* 50% av bredden för två kolumner */
+        margin-bottom: 20px;
+        padding: 10px;
+      }
+
+      .portfolio-company img {
+        margin-top: 40px;
+        text-align: center;
+        width: 100%; /* Bilden fyller sin container */
+        height: auto; /* Automatisk höjd för att bevara proportioner */
+        object-fit: cover; /* Så att bilden fyller kvadraten */
+      }
+
+      .portfolio-company h3 {
+        margin-top: 20px; /* Mindre mellanrum mellan rubrik och text */
+        text-align: center;
+        width: 100%; /* Bredden anpassas */
+      }
+      .portfolio-company p {
+        width: 100%; /* Bredden anpassas */
+        text-align: left;
+      }
       /* Media query för mindre skärmar */
       @media screen and (max-width: 768px) {
         .team-member {
+          width: 150%; /* Ändra bredden till full bredd för en kolumn */
+        }
+        .portfolio-company {
           width: 100%; /* Ändra bredden till full bredd för en kolumn */
         }
       }
@@ -174,6 +207,9 @@
           font-size: 2em; /* Minska textstorleken för mindre skärmar */
         }
         .team-member {
+          width: 150%; /* Ändra bredden till full bredd för en kolumn */
+        }
+        .portfolio-company {
           width: 100%; /* Ändra bredden till full bredd för en kolumn */
         }
       }
@@ -268,16 +304,20 @@
     </section>
     <!-- Våra innehav -->
     <section id="portfolio">
-      <h3>Murgröna Bostäder AB</h3>
-      <p>
-        Fastighetsbolag med bostadsfastigheter i centrala Karlstad. Trönningenäs
-        ägarandel är 16,82%.
-      </p>
-      <h3>grnbck AB</h3>
-      <p>
-        Private equity-bolag med fokus på fastighetssektorn. Trönningenäs
-        ägarandel är 38,78%.
-      </p>
+      <div class="portfolio-company">
+        <h3>Murgröna Bostäder AB</h3>
+        <p>
+          Fastighetsbolag med bostadsfastigheter i centrala Karlstad.
+          Trönningenäs ägarandel är 16,82%.
+        </p>
+      </div>
+      <div class="portfolio-company">
+        <h3>grnbck AB</h3>
+        <p>
+          Private equity-bolag med fokus på fastighetssektorn. Trönningenäs
+          ägarandel är 38,78%.
+        </p>
+      </div>
       <!-- Lägg till mer information om portföljen här -->
     </section>
   </body>
