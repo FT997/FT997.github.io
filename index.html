@@ -168,13 +168,13 @@
       }
 
       .portfolio-company {
-        width: calc(50% - 40px); /* 50% av bredden för två kolumner */
+        width: calc(50% - 80px); /* 50% av bredden för två kolumner */
         margin-bottom: 20px;
-        padding: 20px;
+        padding: 40px;
       }
 
       .portfolio-company img {
-        margin-top: 40px;
+        margin-top: 0px;
         text-align: center;
         width: 100%; /* Bilden fyller sin container */
         height: auto; /* Automatisk höjd för att bevara proportioner */
@@ -211,6 +211,9 @@
         .portfolio-company {
           width: 100%; /* Ändra bredden till full bredd för en kolumn */
         }
+      }
+      .portfolio-image {
+        border: 1px solid #000;
       }
     </style>
   </head>
@@ -304,20 +307,10 @@
     <!-- Våra innehav -->
     <section id="portfolio">
       <div class="portfolio-company">
-        <img src="murgrona.jpg" alt="murgrona" />
-        <h3>Murgröna Bostäder AB</h3>
-        <p>
-          Fastighetsbolag med bostadsfastigheter i centrala Karlstad.
-          Trönningenäs ägarandel är 16,82%.
-        </p>
+        <img src="murgrona.jpg" alt="murgrona" class="portfolio-image" />
       </div>
       <div class="portfolio-company">
-        <img src="grnbck.jpg" alt="grnbck" />
-        <h3>grnbck AB</h3>
-        <p>
-          Private equity-bolag med fokus på fastighetssektorn. Trönningenäs
-          ägarandel är 38,78%.
-        </p>
+        <img src="grnbck.jpg" alt="grnbck" class="portfolio-image" />
       </div>
       <!-- Lägg till mer information om portföljen här -->
     </section>
