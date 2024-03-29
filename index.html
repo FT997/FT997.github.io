@@ -1,278 +1,281 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Trönningenäs</title>
-    <style>
-      /* CSS */
-      body {
-        font-family: "Helvetica Neue", Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #fff;
-        color: #000;
-      }
+<head>
+  <title>Trönningenäs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* CSS */
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #000;
+    }
 
-      section {
-        margin: 0;
-        margin-block-end: 0px;
-        border: 0px solid #fff;
-        padding: 40px; /* Standard padding för de andra sektionerna */
-      }
+    section {
+      margin: 0;
+      margin-block-end: 0px;
+      border: 0px solid #fff;
+      padding: 40px; /* Standard padding för de andra sektionerna */
+    }
 
-      .first-section {
-        padding: 0; /* Noll padding för den första sektionen */
-      }
+    .first-section {
+      padding: 0; /* Noll padding för den första sektionen */
+    }
 
-      h1,
-      h2,
-      h3,
-      p {
-        font-family: "Helvetica Neue", Arial, sans-serif;
-        color: #000;
-      }
+    h1,
+    h2,
+    h3,
+    p {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: #000;
+    }
 
-      form input[type="text"],
-      form input[type="email"],
-      form textarea {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #000;
-      }
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #000;
+    }
 
-      form input[type="submit"] {
-        background-color: #000;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-      }
-      .myImage {
-        width: 100%; /* Bredden expanderar till att fylla container */
-        height: 75vh; /* Begränsar höjden till 60% av vyhöjden */
-        object-fit: cover;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      #home {
-        position: relative;
-        color: #fff;
-      }
-      #home .centered-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: #fff;
-      }
-      /* Ny CSS-regel för att ändra textfärgen till vit i sektionen med id "home" */
-      #home h2,
-      #home h3 {
-        color: #fff;
-      }
-      /* Lägg till en mörkare överlägg på bilden */
-      #home .image-overlay::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Svart överlägg med 50% opacitet */
-      }
-      #home .image-overlay {
-        position: relative;
-      }
+    form input[type="submit"] {
+      background-color: #000;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    .myImage {
+      width: 100%; /* Bredden expanderar till att fylla container */
+      height: 75vh; /* Begränsar höjden till 60% av vyhöjden */
+      object-fit: cover;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #home {
+      position: relative;
+      color: #fff;
+    }
+    #home .centered-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+    }
+    /* Ny CSS-regel för att ändra textfärgen till vit i sektionen med id "home" */
+    #home h2,
+    #home h3 {
+      color: #fff;
+    }
+    /* Lägg till en mörkare överlägg på bilden */
+    #home .image-overlay::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Svart överlägg med 50% opacitet */
+    }
+    #home .image-overlay {
+      position: relative;
+    }
 
-      /* Modifiering för att göra "TRÖNNINGENÄS" dubbelt så stor och minska avståndet till följande sektion */
-      #logga h1 {
-        font-size: 3em; /* Dubbelt så stor text */
-        margin-top: 10px;
-        margin-bottom: 0px; /* Minska avståndet till följande sektion */
-      }
-      #home h2 {
-        font-size: 4em; /* Dubbelt så stor text */
-        margin-top: 0px;
-        margin-bottom: 0px; /* Minska avståndet till följande sektion */
-      }
-      #logga h5 {
-        font-size: 0.75em; /* Dubbelt så stor text */
-        padding-left: 2px;
-        margin-top: 10px;
-        margin-bottom: 0px; /* Minska avståndet till följande sektion */
-      }
-      p {
-        font-size: 1.25em; /* Dubbelt så stor text */
-      }
-      #about {
-        padding: 60px; /* Standard padding */
-        margin-top: 40px;
-        margin-right: 40px;
-        margin-bottom: 40px;
-        text-align: center;
-        max-width: auto; /* Begränsa till högst 400px från höger */
-        width: auto; /* Återställ standardbredden */
-      }
-      /* Lägg till styling för den nya bildsektionen */
-      #image-section {
-        float: right; /* Placera till höger */
-        width: 50%; /* Ta upp hälften av sidans bredd */
-        margin-right: 0px;
-        margin-top: 80px;
-        margin-left: 0px;
-        padding: 40px;
-      }
-      .square-image {
-        width: 500px; /* Bilden fyller sin container */
-        height: 350px; /* Automatisk höjd för att bevara proportioner */
-      }
-      /* Teamet */
-      #team {
-        display: flex;
-        justify-content: flex-start; /* Placera längst upp till vänster */
-        align-items: flex-start; /* Placera längst upp till vänster */
-      }
+    /* Modifiering för att göra "TRÖNNINGENÄS" dubbelt så stor och minska avståndet till följande sektion */
+    #logga h1 {
+      font-size: 3em; /* Dubbelt så stor text */
+      margin-top: 10px;
+      margin-bottom: 0px; /* Minska avståndet till följande sektion */
+    }
+    #home h2 {
+      font-size: 4em; /* Dubbelt så stor text */
+      margin-top: 0px;
+      margin-bottom: 0px; /* Minska avståndet till följande sektion */
+    }
+    #logga h5 {
+      font-size: 0.75em; /* Dubbelt så stor text */
+      padding-left: 2px;
+      margin-top: 10px;
+      margin-bottom: 0px; /* Minska avståndet till följande sektion */
+    }
+    p {
+      font-size: 1.25em; /* Dubbelt så stor text */
+    }
+    #about {
+      padding: 60px; /* Standard padding */
+      margin-top: 40px;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      text-align: center;
+      max-width: auto; /* Begränsa till högst 400px från höger */
+      width: auto; /* Återställ standardbredden */
+    }
+    /* Lägg till styling för den nya bildsektionen */
+    #image-section {
+      float: right; /* Placera till höger */
+      width: 50%; /* Ta upp hälften av sidans bredd */
+      margin-right: 0px;
+      margin-top: 80px;
+      margin-left: 0px;
+      padding: 40px;
+    }
+    .square-image {
+      width: 500px; /* Bilden fyller sin container */
+      height: 350px; /* Automatisk höjd för att bevara proportioner */
+    }
+    /* Teamet */
+    #team {
+      display: flex;
+      justify-content: flex-start; /* Placera längst upp till vänster */
+      align-items: flex-start; /* Placera längst upp till vänster */
+      flex-wrap: wrap; /* Låt elementen wrapa när de inte får plats bredvid varandra */
+    }
 
+    .team-member {
+      width: calc(50% - 20px); /* 50% av bredden för två kolumner */
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .team-member img {
+      margin-top: 40px;
+      width: 100%; /* Bilden fyller sin container */
+      height: auto; /* Automatisk höjd för att bevara proportioner */
+      object-fit: cover; /* Så att bilden fyller kvadraten */
+    }
+
+    .team-member h3 {
+      margin-top: 20px; /* Mindre mellanrum mellan rubrik och text */
+      width: 100%; /* Bredden anpassas */
+    }
+    .team-member p {
+      width: 100%; /* Bredden anpassas */
+    }
+
+    /* Media query för mindre skärmar */
+    @media screen and (max-width: 768px) {
       .team-member {
-        width: calc(33.33% - 20px);
-        margin-bottom: 20px;
-        text-align: left;
+        width: 100%; /* Ändra bredden till full bredd för en kolumn */
       }
+    }
 
-      .team-member img {
-        margin-top: 40px;
-        width: 300px;
-        height: 300px;
-        object-fit: cover; /* Så att bilden fyller kvadraten */
+    /* Media query för ännu mindre skärmar, t.ex. mobiltelefoner */
+    @media screen and (max-width: 480px) {
+      #home h2 {
+        font-size: 2em; /* Minska textstorleken för mindre skärmar */
       }
-
-      .team-member h3 {
-        margin-top: 50px;
-        width: 300px;
+      .team-member {
+        width: 100%; /* Ändra bredden till full bredd för en kolumn */
       }
-      .team-member p {
-        width: 300px;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Logga -->
-    <section id="logga">
-      <!-- Använder klassen "first-section" för den första sektionen -->
-      <h1>TRÖNNINGENÄS</h1>
-    </section>
-    <!-- Startsida -->
-    <section id="home" class="first-section">
-      <!-- Använder klassen "first-section" för den första sektionen -->
-      <div class="image-overlay">
-        <img src="bakgrundsbild.jpg" alt="Bakgrundsbild" class="myImage" />
-      </div>
-      <div class="centered-text">
-        <h2>
-          Investmentbolag med opportunistisk investeringsapproach
-        </h2>
-      </div>
-    </section>
-    <!-- Om oss -->
-    <section id="about">
+    }
+  </style>
+</head>
+<body>
+  <!-- Logga -->
+  <section id="logga">
+    <!-- Använder klassen "first-section" för den första sektionen -->
+    <h1>TRÖNNINGENÄS</h1>
+  </section>
+  <!-- Startsida -->
+  <section id="home" class="first-section">
+    <!-- Använder klassen "first-section" för den första sektionen -->
+    <div class="image-overlay">
+      <img src="bakgrundsbild.jpg" alt="Bakgrundsbild" class="myImage" />
+    </div>
+    <div class="centered-text">
+      <h2>Investmentbolag med opportunistisk investeringsapproach</h2>
+    </div>
+  </section>
+  <!-- Om oss -->
+  <section id="about">
+    <p>
+      Investment AB Trönningenäs är ett privatägt aktiebolag som förvärvar
+      andelar i både noterade och onoterade företag inom sektorerna
+      fastigheter, finans, industri och tech.
+    </p>
+    <p>
+      Centralt i vårt arbete är att identifiera tillgångar att förvärva till
+      attraktiva priser där stor vikt läggs vid att upprätthålla en
+      säkerhetsmarginal i alla affärsbeslut. Genom dataanalys och en strävan
+      efter ständig utveckling är vårt mål att generera en god riskjusterad
+      avkastning på vårt kapital över tid. Detta samtidigt som vi omger oss
+      med intelligenta, drivna och lojala medarbetare och samarbetspartners.
+    </p>
+  </section>
+  <!-- Teamet header -->
+  <section id="home" class="first-section">
+    <!-- Använder klassen "first-section" för den första sektionen -->
+    <div class="image-overlay">
+      <img src="hav.jpeg" alt="Bakgrundsbild" class="myImage" />
+    </div>
+    <div class="centered-text">
+      <h2>Teamet</h2>
+    </div>
+  </section>
+  <!-- Teamet -->
+  <section id="team">
+    <div class="team-member">
+      <img src="Fredrik Toremark.jpeg" alt="Fredrik Toremark" />
+      <h3>Fredrik Toremark, Styrelseledamot</h3>
       <p>
-        Investment AB Trönningenäs är ett privatägt aktiebolag som förvärvar
-        andelar i både noterade och onoterade företag inom sektorerna
-        fastigheter, finans, industri och tech.
+        Styrelseledamot sedan 2019. Erfarenhet av förvärv och förvaltning av
+        fastigheter, projektledning inom management samt juridisk rådgivning
+        med fokus på bolagsrättsliga frågor. Har det primära ansvaret över
+        bolagets kapitalallokering.
       </p>
       <p>
-        Centralt i vårt arbete är att identifiera tillgångar att förvärva till
-        attraktiva priser där stor vikt läggs vid att upprätthålla en
-        säkerhetsmarginal i alla affärsbeslut. Genom dataanalys och en strävan
-        efter ständig utveckling är vårt mål att generera en god riskjusterad
-        avkastning på vårt kapital över tid. Detta samtidigt som vi omger oss
-        med intelligenta, drivna och lojala medarbetare och samarbetspartners.
+        Bachelor of Business Administration, Stockholm University (2021-2023)
       </p>
-    </section>
-    <!-- Teamet header -->
-    <section id="home" class="first-section">
-      <!-- Använder klassen "first-section" för den första sektionen -->
-      <div class="image-overlay">
-        <img src="hav.jpeg" alt="Bakgrundsbild" class="myImage" />
-      </div>
-      <div class="centered-text">
-        <h2>Teamet</h2>
-      </div>
-    </section>
-    <!-- Teamet -->
-    <section id="team">
-      <div class="team-member">
-        <img src="Fredrik Toremark.jpeg" alt="Fredrik Toremark" />
-        <h3>Fredrik Toremark, Styrelseledamot</h3>
-        <p>
-          Styrelseledamot sedan 2019. Erfarenhet av förvärv och förvaltning av
-          fastigheter, projektledning inom management samt juridisk rådgivning
-          med fokus på bolagsrättsliga frågor. Har det primära ansvaret över
-          bolagets kapitalallokering.
-        </p>
-        <p>
-          Bachelor of Business Administration, Stockholm University (2021-2023)
-        </p>
-        <p>Masters of Laws (LL.M.), Stockholm University (2020-)</p>
-      </div>
-      <div class="team-member">
-        <img src="Johan Carlsson.jpeg" alt="Johan Carlsson" />
-        <h3>Johan Carlsson, Styrelsesuppleant</h3>
-        <p>
-          Styrelsesuppleant sedan 2024 (och styrelseordförande mellan
-          2019-2024). Stor erfarenhet inom fastigheter, finansteknologi och
-          trading med ett flertal startups i Stockholm, New York och London.
-          Ingår i bolagets placeringsråd.
-        </p>
-      </div>
-      <div class="team-member">
-        <img src="Ulrika Wahl.jpeg" alt="Ulrika Wahl" />
-        <h3>Ulrika Wahl, Ekonomiansvarig</h3>
-        <p>
-          Varit med sedan starten 2019. Lång erfarenhet av såväl redovisning som
-          bolagsadministration. Ansvarar för bolagets redovisning.
-        </p>
-      </div>
-    </section>
-    <!-- Våra innehav header -->
-    <section id="home" class="first-section">
-      <!-- Använder klassen "first-section" för den första sektionen -->
-      <div class="image-overlay">
-        <img src="himmel.jpeg" alt="Bakgrundsbild" class="myImage" />
-      </div>
-      <div class="centered-text">
-        <h2>Våra innehav</h2>
-      </div>
-    </section>
-    <!-- Våra innehav -->
-    <section id="portfolio">
-      <h3>Murgröna Bostäder AB</h3>
+      <p>Masters of Laws (LL.M.), Stockholm University (2020-)</p>
+    </div>
+    <div class="team-member">
+      <img src="Johan Carlsson.jpeg" alt="Johan Carlsson" />
+      <h3>Johan Carlsson, Styrelsesuppleant</h3>
       <p>
-        Fastighetsbolag med bostadsfastigheter i centrala Karlstad. Trönningenäs
-        ägarandel är 16,82%.
+        Styrelsesuppleant sedan 2024 (och styrelseordförande mellan
+        2019-2024). Stor erfarenhet inom fastigheter, finansteknologi och
+        trading med ett flertal startups i Stockholm, New York och London.
+        Ingår i bolagets placeringsråd.
       </p>
-      <h3>grnbck AB</h3>
+    </div>
+    <div class="team-member">
+      <img src="Ulrika Wahl.jpeg" alt="Ulrika Wahl" />
+      <h3>Ulrika Wahl, Ekonomiansvarig</h3>
       <p>
-        Private equity-bolag med fokus på fastighetssektorn. Trönningenäs
-        ägarandel är 38,78%.
+        Varit med sedan starten 2019. Lång erfarenhet av såväl redovisning som
+        bolagsadministration. Ansvarar för bolagets redovisning.
       </p>
-      <!-- Lägg till mer information om portföljen här -->
-    </section>
-
-    <!-- Kontakt -->
-    <section id="contact">
-      <h2>Kontakt</h2>
-      <form action="skicka.php">
-        <label for="name">Namn:</label><br />
-        <input type="text" id="name" name="name" /><br />
-        <label for="email">E-post:</label><br />
-        <input type="email" id="email" name="email" /><br />
-        <label for="message">Meddelande:</label><br />
-        <textarea id="message" name="message"></textarea><br />
-        <input type="submit" value="Skicka" />
-      </form>
-    </section>
-  </body>
+    </div>
+  </section>
+  <!-- Våra innehav header -->
+  <section id="home" class="first-section">
+    <!-- Använder klassen "first-section" för den första sektionen -->
+    <div class="image-overlay">
+      <img src="himmel.jpeg" alt="Bakgrundsbild" class="myImage" />
+    </div>
+    <div class="centered-text">
+      <h2>Våra innehav</h2>
+    </div>
+  </section>
+  <!-- Våra innehav -->
+  <section id="portfolio">
+    <h3>Murgröna Bostäder AB</h3>
+    <p>
+      Fastighetsbolag med bostadsfastigheter i centrala Karlstad. Trönningenäs
+      ägarandel är 16,82%.
+    </p>
+    <h3>grnbck AB</h3>
+    <p>
+      Private equity-bolag med fokus på fastighetssektorn. Trönningenäs
+      ägarandel är 38,78%.
+    </p>
+    <!-- Lägg till mer information om portföljen här -->
+  </section>
+</body>
 </html>
