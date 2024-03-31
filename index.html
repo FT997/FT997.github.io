@@ -126,18 +126,15 @@
         justify-content: space-between; /* Jämna utrymmet mellan .omtext och .ombild */
         align-items: flex-start; /* Centrera flex-items vertikalt */
       }
-
       .omtext {
         width: 30%; /* Ge .omtext 50% av utrymmet */
       }
-
       .ombild {
         margin-top: 20px;
         margin-right: 100px;
         height: auto;
         width: 50%;
       }
-
       /* Lägg till styling för den nya bildsektionen */
       #image-section {
         float: right; /* Placera till höger */
@@ -277,7 +274,9 @@
         }
         #about {
           padding: 40px; /* Standard padding */
-          display: block;
+          display: flex; /* Använd flexbox */
+          justify-content: space-between; /* Jämna utrymmet mellan .omtext och .ombild */
+          align-items: flex-start; /* Centrera flex-items vertikalt */
           margin-left: 0px;
           margin-right: 0px;
           margin-top: 20px;
