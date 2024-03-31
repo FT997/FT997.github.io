@@ -187,7 +187,7 @@
         display: flex;
         justify-content: flex-start; /* Placera längst upp till vänster */
         align-items: flex-start; /* Placera längst upp till vänster */
-        flex-wrap: wrap; /* Låt elementen wrapa när de inte får plats bredvid varandra */
+        flex-wrap: wrap; /* Låthome elementen wrapa när de inte får plats bredvid varandra */
       }
 
       .portfolio-company {
@@ -256,17 +256,28 @@
         }
         #contact h2 {
           font-size: 300%;
-          color: #fff;
+          color: #000;
         }
         #about {
-          padding: 80px; /* Standard padding */
-          margin-left: 0px;
-          margin-right: 0px;
-          margin-top: 40px;
-          margin-bottom: 40px;
+          padding: 120px; /* Standard padding */
+          display: flex; /* Använd flexbox */
+          justify-content: space-between; /* Jämna utrymmet mellan .omtext och .ombild */
+          align-items: flex-start; /* Centrera flex-items vertikalt */
+        }
+        .omtext {
+          width: 40%; /* Ge .omtext 50% av utrymmet */
+        }
+
+        .ombild {
+          margin-top: 20px;
+          margin-right: 100px;
+          height: auto;
+          width: 40%;
+        }
+        #home {
+          height: 50%;
         }
       }
-
       /* Media query för ännu mindre skärmar, t.ex. mobiltelefoner */
       @media screen and (max-width: 480px) {
         #logga h1 {
@@ -283,7 +294,7 @@
         }
         #contact h2 {
           font-size: 300%;
-          color: #fff;
+          color: #000;
         }
         #about {
           padding: 60px; /* Standard padding */
