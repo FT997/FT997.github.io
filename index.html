@@ -10,7 +10,7 @@
         font-family: "Helvetica Neue", Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #fff;
+        background-color: #f0f0f0ff;
         color: #000;
       }
 
@@ -27,7 +27,11 @@
 
       h1,
       h2,
-      h3,
+      h3 {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        color: #000;
+        font-weight: 400; /* Gör texten tunn */
+      }
       p {
         font-family: "Helvetica Neue", Arial, sans-serif;
         color: #000;
@@ -82,13 +86,16 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Svart överlägg med 50% opacitet */
+        background: rgba(0, 0, 0, 0); /* Svart överlägg med 50% opacitet */
       }
       #home .image-overlay {
         position: relative;
       }
 
       /* Modifiering för att göra "TRÖNNINGENÄS" dubbelt så stor och minska avståndet till följande sektion */
+      #logga {
+        background-color: #fff;
+      }
       #logga h1 {
         font-size: 200%; /* Dubbelt så stor text */
         margin-top: 10px;
@@ -105,19 +112,32 @@
         margin-top: 10px;
         margin-bottom: 0px; /* Minska avståndet till följande sektion */
       }
+      #logga img {
+        max-height: 50px;
+        float: top;
+      }
       p {
-        font-size: 1.25em; /* Dubbelt så stor text */
+        font-size: 1em; /* Dubbelt så stor text */
+        font-weight: 300; /* Gör texten tunn */
       }
       #about {
-        padding: 60px; /* Standard padding */
-        margin-right: 40px;
-        margin-left: 40px;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        text-align: left;
-        max-width: auto; /* Begränsa till högst 400px från höger */
-        width: auto; /* Återställ standardbredden */
+        padding: 120px; /* Standard padding */
+        display: flex; /* Använd flexbox */
+        justify-content: space-between; /* Jämna utrymmet mellan .omtext och .ombild */
+        align-items: flex-start; /* Centrera flex-items vertikalt */
       }
+
+      .omtext {
+        width: 30%; /* Ge .omtext 50% av utrymmet */
+      }
+
+      .ombild {
+        margin-top: 20px;
+        margin-right: 100px;
+        height: auto;
+        width: 50%;
+      }
+
       /* Lägg till styling för den nya bildsektionen */
       #image-section {
         float: right; /* Placera till höger */
@@ -155,7 +175,7 @@
 
       .team-member h3 {
         margin-top: 20px; /* Mindre mellanrum mellan rubrik och text */
-        text-align: center;
+        text-align: left;
         width: 100%; /* Bredden anpassas */
       }
       .team-member p {
@@ -194,20 +214,21 @@
         text-align: left;
       }
       .portfolio-image {
-        border: 1px solid #000;
+        border: 0px solid #000;
       }
       #contact {
-        background-color: #28282aff;
+        background-color: #fff;
       }
       #contact h2 {
-        color: #fff;
+        color: #000;
         padding: 40px;
         font-size: 450%;
       }
       #contact a {
-        color: #fff;
-        padding: 40px;
+        color: #000;
+        padding: 50px;
         font-size: 1.25em;
+        font-weight: 300;
       }
       #contact div {
         padding: 60px;
@@ -238,7 +259,7 @@
           color: #fff;
         }
         #about {
-          padding: 60px; /* Standard padding */
+          padding: 80px; /* Standard padding */
           margin-left: 0px;
           margin-right: 0px;
           margin-top: 40px;
@@ -266,8 +287,8 @@
         }
         #about {
           padding: 60px; /* Standard padding */
-          margin-left: 0px;
-          margin-right: 0px;
+          margin-left: 40px;
+          margin-right: 60px;
           margin-top: 40px;
           margin-bottom: 40px;
         }
@@ -278,7 +299,7 @@
     <!-- Logga -->
     <section id="logga">
       <!-- Använder klassen "first-section" för den första sektionen -->
-      <h1>TRÖNNINGENÄS</h1>
+      <img src="Logga Trönningenäs.svg" alt="Logga" />
     </section>
     <!-- Startsida -->
     <section id="home" class="first-section">
@@ -292,19 +313,25 @@
     </section>
     <!-- Om oss -->
     <section id="about">
-      <p>
-        Investment AB Trönningenäs är ett privatägt aktiebolag som förvärvar
-        andelar i både noterade och onoterade företag inom sektorerna
-        fastigheter, finans, industri och tech.
-      </p>
-      <p>
-        Centralt i vårt arbete är att identifiera tillgångar att förvärva till
-        attraktiva priser där stor vikt läggs vid att upprätthålla en
-        säkerhetsmarginal i alla affärsbeslut. Genom dataanalys och en strävan
-        efter ständig utveckling är vårt mål att generera en god riskjusterad
-        avkastning på vårt kapital över tid. Detta samtidigt som vi omger oss
-        med intelligenta, drivna och lojala medarbetare och samarbetspartners.
-      </p>
+      <div class="omtext">
+        <h1>Trönningenäs</h1>
+        <p>
+          Investment AB Trönningenäs är ett privatägt aktiebolag som förvärvar
+          andelar i både noterade och onoterade företag inom sektorerna
+          fastigheter, finans, industri och tech.
+        </p>
+        <p>
+          Centralt i vårt arbete är att identifiera tillgångar att förvärva till
+          attraktiva priser där stor vikt läggs vid att upprätthålla en
+          säkerhetsmarginal i alla affärsbeslut. Genom dataanalys och en strävan
+          efter ständig utveckling är vårt mål att generera en god riskjusterad
+          avkastning på vårt kapital över tid. Detta samtidigt som vi omger oss
+          med intelligenta, drivna och lojala medarbetare och samarbetspartners.
+        </p>
+      </div>
+      <div class="ombild">
+        <img src="Logga Trönningenäs.svg" alt="Logga" />
+      </div>
     </section>
     <!-- Teamet header -->
     <section id="home" class="first-section">
