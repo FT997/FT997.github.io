@@ -257,9 +257,7 @@
           padding: 0px;
           margin-bottom: 40px;
           margin-top: 40px;
-          width: calc(
-            33.33% - 80px
-          ); /* Ändra bredden till full bredd för en kolumn */
+          width: calc(33.33% - 80px);
         }
         #contact h2 {
           font-size: 300%;
@@ -275,12 +273,13 @@
         #about {
           padding: 40px; /* Standard padding */
           display: flex; /* Använd flexbox */
-          justify-content: space-between; /* Jämna utrymmet mellan .omtext och .ombild */
+          justify-content: flex-start;
           align-items: flex-start; /* Centrera flex-items vertikalt */
           margin-left: 0px;
           margin-right: 0px;
           margin-top: 20px;
           margin-bottom: 20px;
+          flex-wrap: wrap;
         }
         .omtext {
           margin-top: 0px;
