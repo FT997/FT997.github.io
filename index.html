@@ -258,21 +258,6 @@
           font-size: 300%;
           color: #000;
         }
-        #about {
-          padding: 120px; /* Standard padding */
-          display: flex; /* Använd flexbox */
-          justify-content: space-between; /* Jämna utrymmet mellan .omtext och .ombild */
-          align-items: flex-start; /* Centrera flex-items vertikalt */
-        }
-        .omtext {
-          width: 40%; /* Ge .omtext 50% av utrymmet */
-        }
-        .ombild {
-          margin-top: 20px;
-          margin-right: 100px;
-          height: auto;
-          width: 40%;
-        }
       }
       /* Media query för ännu mindre skärmar, t.ex. mobiltelefoner */
       @media screen and (max-width: 480px) {
@@ -282,15 +267,6 @@
         #home h2 {
           font-size: 2em; /* Minska textstorleken för mindre skärmar */
         }
-        #home .image-overlay::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 33%;
-        height: 33%;
-        background: rgba(0, 0, 0, 0); /* Svart överlägg med 50% opacitet */
-      }
         .team-member {
           width: 100%; /* Ändra bredden till full bredd för en kolumn */
         }
@@ -303,7 +279,7 @@
         }
         #about {
           padding: 60px; /* Standard padding */
-          display: wrap;
+          display: row;
           margin-left: 0px;
           margin-right: 0px;
           margin-top: 40px;
