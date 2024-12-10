@@ -379,18 +379,18 @@ padding-top: 90px;
   #hero {
     flex-direction: column; /* Byter layout till vertikal */
     align-items: center; /* Centrerar innehållet */
-    padding: 0 1rem; /* Lägger till lite padding för marginaler */
   }
 
   #hero .text {
-    max-width: 90%; /* Gör texten mer responsiv i mobil */
-    text-align: center; /* Centrerar texten */
+    max-width: 100%; /* Gör texten mer responsiv i mobil */
+    text-align: left; /* Centrerar texten */
     margin-bottom: 1rem; /* Lägger till avstånd mellan text och video */
   }
 
   #hero .video {
     width: 100%; /* Videon fyller hela bredden */
     max-width: 100%; /* Säkerställer att den inte överskrider skärmens bredd */
+    padding: 0 1rem; /* Lägger till lite padding för marginaler */
   }
   .footer h1 {
     font-size: 48px;
