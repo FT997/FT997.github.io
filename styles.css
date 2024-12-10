@@ -617,4 +617,24 @@ padding-top: 90px;
     width: auto; /* Tillbaka till standardbredd */
     text-align: left; /* Vänsterjustera texten */
   }
-}
+    #hero {
+      flex-direction: row; /* Ändra layouten till radvis */
+      justify-content: flex-start; /* Placera innehållet från vänster */
+      align-items: center; /* Centrera innehållet vertikalt */
+      padding: 0 1rem; /* Säkerställ att det finns marginal från kanterna */
+    }
+  
+    #hero .text {
+      max-width: 50%; /* Begränsa textens bredd för att ge plats för videon */
+      text-align: left; /* Säkerställ vänsterjusterad text */
+      margin: 0; /* Ta bort extra marginaler */
+    }
+  
+    #hero .video {
+      flex-shrink: 0;
+      width: 50%; /* Gör videon lika bred som texten */
+      max-width: 50%; /* Begränsa till hälften av tillgänglig bredd */
+      height: auto; /* Bevarar proportionerna */
+      margin: 0; /* Justerar bort onödig marginal */
+    }
+  }
