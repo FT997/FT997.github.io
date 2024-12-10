@@ -284,9 +284,9 @@ padding-top: 90px;
     display: none; /* Göm överflödiga linjer */
   }
 
-  /* Visa färre linjer */
-  .vertical-lines div:nth-child(odd) {
-    display: block; /* Visa bara vartannat element */
+  /* Visa endast var tredje linje */
+.vertical-lines div:nth-child(3n) {
+  display: block; /* Visa endast var tredje element */
   }
 }
 /* Styla hamburgarmenyn */
