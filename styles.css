@@ -638,3 +638,43 @@ padding-top: 90px;
       margin: 0; /* Justerar bort onödig marginal */
     }
   }
+/* Anpassning för hamburgermenyn i horisontellt läge */
+@media (max-width: 812px) and (orientation: landscape) {
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 4rem; /* Placera precis under header */
+    left: 0;
+    width: 100%; /* Täcker hela bredden */
+    height: calc(100% - 4rem); /* Täck hela sidan under header */
+    overflow-y: auto; /* Aktivera rullning om innehållet är för långt */
+    background: #fff; /* Bakgrundsfärg för menyn */
+    padding: 1rem 0; /* Marginal mellan valen */
+    transform: translateY(-100%); /* Dölj menyn initialt */
+    transition: transform 0.4s ease-in-out; /* Mjuk öppning/stängning */
+    z-index: 1000; /* Placera menyn ovanför annat innehåll */
+  }
+
+  .nav ul.active {
+    transform: translateY(0); /* Visa menyn när den är aktiv */
+  }
+
+  .nav ul li {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .nav ul li a {
+    font-size: 1.2rem;
+    color: #000;
+  }
+
+  /* Justera hamburgarmenyns storlek och position */
+  .hamburger {
+    position: fixed; /* Fäst hamburgaren i hörnet */
+    top: 1rem; /* Avstånd från toppen */
+    right: 1rem; /* Avstånd från höger */
+    z-index: 1001; /* Ovanför menyn */
+  }
+}
