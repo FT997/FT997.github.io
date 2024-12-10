@@ -593,3 +593,28 @@ padding-top: 90px;
   }
 
 }
+@media (max-width: 812px) and (orientation: landscape) {
+  .team {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Återgå till tre kolumner */
+    gap: 1rem;
+    align-items: start; /* Justerar vertikal position */
+  }
+
+  .member {
+    width: auto; /* Tillbaka till standardbredd */
+    text-align: left; /* Vänsterjustera texten */
+  }
+
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Två kolumner för företag */
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .company {
+    width: auto; /* Tillbaka till standardbredd */
+    text-align: left; /* Vänsterjustera texten */
+  }
+}
