@@ -201,7 +201,6 @@ padding-top: 90px;
 .company img {
   width: 100%; /* Gör att bilden fyller sin container */
   height: 100%; /* Bevarar proportionerna */
-  max-height: 40%; /* Begränsar höjden till 200px */
   object-fit: cover; /* Beskär vid behov för att fylla containern */
 }
 
